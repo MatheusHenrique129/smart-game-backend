@@ -16,7 +16,7 @@ class Store extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Game, { through: "tb_game_store" });
+    this.belongsToMany(models.Game, { through: "game_store" });
   }
 }
 

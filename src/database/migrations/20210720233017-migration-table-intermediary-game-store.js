@@ -2,12 +2,12 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    queryInterface.createTable("tb_game_store", {
+    queryInterface.createTable("game_store", {
       game_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "tb_games",
+          model: "games",
           key: "id",
         },
         onUpdate: "CASCADE",
@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "tb_stores",
+          model: "stores",
           key: "id",
         },
         onUpdate: "CASCADE",
@@ -35,6 +35,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    queryInterface.dropTable("tb_game_store");
+    queryInterface.dropTable("game_store");
   },
 };

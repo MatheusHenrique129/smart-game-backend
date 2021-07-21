@@ -17,8 +17,8 @@ class Game extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Store, { through: "tb_game_store" });
-    this.belongsToMany(models.Platform, { through: "tb_game_platform" });
+    this.belongsToMany(models.Store, { through: "game_store" });
+    this.belongsToMany(models.Platform, { through: "game_platform" });
   }
 }
 

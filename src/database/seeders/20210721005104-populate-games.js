@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert("tb_games", [
+    await queryInterface.bulkInsert("games", [
       {
         name: "Overwatch",
         description:
@@ -71,6 +71,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("tb_games", null);
+    await queryInterface.bulkDelete("games", null);
   },
 };

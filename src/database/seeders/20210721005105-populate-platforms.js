@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert("tb_platforms", [
+    await queryInterface.bulkInsert("platforms", [
       {
         name: "PC",
       },
@@ -31,6 +31,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("tb_platforms", null);
+    await queryInterface.bulkDelete("platforms", null);
   },
 };

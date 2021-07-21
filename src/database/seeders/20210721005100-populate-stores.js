@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert("tb_stores", [
+    await queryInterface.bulkInsert("stores", [
       {
         name: "Shopping União",
         map_location:
@@ -28,6 +28,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("tb_stores", null);
+    await queryInterface.bulkDelete("stores", null);
   },
 };
