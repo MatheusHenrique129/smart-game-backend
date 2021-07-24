@@ -51,7 +51,26 @@ module.exports = {
     }
   },
 
-  async update(req, res) {},
+  async update(req, res) {
+    const gameId = req.params.id;
+
+    try {
+      const games = await Game.findByPk(gameId);
+
+      games.rebate = 20;
+
+      const discountValue = (games.rebate * games.price) / 100;
+
+      games.price = games.price - discountValue;
+
+      games.save();
+
+      res.send(games);
+    } catch (error) {
+      console.log(error);
+      res.status(500).send(error);
+    }
+  },
 
   async delete(req, res) {},
 };
