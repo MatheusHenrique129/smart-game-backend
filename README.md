@@ -8,7 +8,7 @@
 * Framework: Express
 * ORM: Sequelize
 * Banco de dados: MySql
-* Express: Framework de construçãp da API
+* Express: Framework de construção da API
 * Sequelize: ORM para o banco
 * MySQL Workbench 8.0: IDE do MySQL ultilizada para criação do banco de dados
 
