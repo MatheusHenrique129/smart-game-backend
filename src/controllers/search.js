@@ -3,10 +3,13 @@ const Game = require("../models/Game");
 
 module.exports = {
   async find(req, res) {
-    const keyword = req.query.keyword;
+    const keyword = req.params.id;
 
     try {
-      const search = await Game.findAll({
+      const game = await Game.findAll({
+        order: [["created_at", "DESC"]],
+        limit: 3,
+
         where: {
           [Op.or]: [
             {
@@ -14,30 +17,16 @@ module.exports = {
                 [Op.like]: `%${keyword}%`,
               },
             },
-
             {
-              price: {
+              description: {
                 [Op.like]: `%${keyword}%`,
               },
             },
           ],
         },
-
-        include: [
-          {
-            association: "Games",
-            attributes: ["name"],
-          },
-        ],
-
-        order: [["created_at", "DESC"]],
-        limit: 3,
       });
 
-      if (search == null || search == "" || search == undefined)
-        return res.status(404).send({ Error: "0 Resultados encontrados." });
-
-      res.status(200).send(search);
+      res.send(game);
     } catch (error) {
       console.log(error);
       res.status(500).send(error);
