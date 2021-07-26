@@ -34,7 +34,7 @@
 
 Após a instalação das depêndencias e a criação do banco de dados, basta iniciar a aplicação atraves da porta "8000" -> $ npm start
 
-#### Rotas GET
+#### Rotas
 
 - http://localhost:8000/games -> Listagem de Jogos
 - http://localhost:8000/stores -> Listagem de Lojas
