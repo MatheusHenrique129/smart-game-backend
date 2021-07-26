@@ -1,16 +1,16 @@
 # smart_game_backend
 
-## Projeto para a loja de jogos, da empresa Smart Games
+## Back-end do projeto para a loja de jogos, da empresa Smart Games
 
 ### Linguagens e ferramentas utilizadas
 
-* Linguagens e ferramentas utilizadas: NodeJS
-* Framework: Express
-* ORM: Sequelize
-* Banco de dados: MySql
-* Express: Framework de construção da API
-* Sequelize: ORM para o banco
-* MySQL Workbench 8.0: IDE do MySQL ultilizada para criação do banco de dados
+- Linguagens e ferramentas utilizadas: NodeJS
+- Framework: Express
+- ORM: Sequelize
+- Banco de dados: MySql
+- Express: Framework de construção da API
+- Sequelize: ORM para o banco
+- MySQL Workbench 8.0: IDE do MySQL ultilizada para criação do banco de dados
 
 ### Pré-requisitos necessários para rodar o projeto
 
@@ -34,6 +34,6 @@ Após a instalação das depêndencias e a criação do banco de dados, basta in
 
 #### Rotas GET
 
-* http://localhost:8000/games -> Listagem de Jogos
-* http://localhost:8000/platforms -> Listagem de Plataformas
-* http://localhost:8000/stores -> Listagem de Lojas
+- http://localhost:8000/games -> Listagem de Jogos
+- http://localhost:8000/platforms -> Listagem de Plataformas
+- http://localhost:8000/stores -> Listagem de Lojas

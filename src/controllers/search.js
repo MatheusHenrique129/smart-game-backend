@@ -3,7 +3,7 @@ const Game = require("../models/Game");
 
 module.exports = {
   async find(req, res) {
-    const keyword = req.params.id;
+    const keyword = req.query.search;
 
     try {
       const game = await Game.findAll({
