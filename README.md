@@ -4,8 +4,8 @@
 
 ### Linguagens e ferramentas utilizadas
 
-- Linguagens e ferramentas utilizadas: NodeJS
-- Framework: Express
+- Linguagens: JavaScript
+- Framework: NodeJS, Express
 - ORM: Sequelize
 - Banco de dados: MySql
 - Express: Framework de construção da API
@@ -15,6 +15,7 @@
 ### Pré-requisitos necessários para rodar o projeto
 
 ```
+- Baixar um clone na sua maquina -> "git clone https://github.com/MatheusHenrique129/smart_game_backend.git"
 - Instalar dependências do projeto -> $ npm install
 
 - Importar o Banco no MYSQL
@@ -28,6 +29,7 @@
 - Sincronizar o back com o banco criado as tabelas e relacionamentos $ "npx sequelize db:migrate"
 
 - Popular as tabelas do banco com os dados fornecidos pela arquivo sql -> "npx sequelize db:seed:all"
+
 ```
 
 Após a instalação das depêndencias e a criação do banco de dados, basta iniciar a aplicação atraves da porta "8000" -> $ npm start
@@ -35,5 +37,6 @@ Após a instalação das depêndencias e a criação do banco de dados, basta in
 #### Rotas GET
 
 - http://localhost:8000/games -> Listagem de Jogos
-- http://localhost:8000/platforms -> Listagem de Plataformas
 - http://localhost:8000/stores -> Listagem de Lojas
+- http://localhost:8000/search -> Buscar os Jogos
+- http://localhost:8000/platforms -> Listagem de Plataformas
