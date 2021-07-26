@@ -9,7 +9,7 @@ module.exports = {
       },
       {
         game_id: 1,
-        store_id: 2,
+        store_id: 1,
       },
       {
         game_id: 2,
